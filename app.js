@@ -1492,13 +1492,13 @@
     renderResult(finalAugment);
   }
 
-  async function loadAugments() {
-    const response = await fetch("/daily-luck-spinner/augments.json", { cache: "no-store" });
+ async function loadAugments() {
+    const response = await fetch("./augments.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`augments.json ${response.status}`);
     const data = await response.json();
     if (!Array.isArray(data) || data.length === 0) throw new Error("augments.json is empty");
     return data;
-  }
+}
 
   async function loadLocalization() {
     const response = await fetch("localization.json", { cache: "no-store" });
