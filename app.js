@@ -1500,15 +1500,15 @@
     return data;
 }
 
-  async function loadLocalization() {
-    const response = await fetch("localization.json", { cache: "no-store" });
+ async function loadLocalization() {
+    const response = await fetch("./localization.json", { cache: "no-store" });
     if (!response.ok) return { weapons: {}, augments: {} };
     const data = await response.json();
     return {
-      weapons: data.weapons || {},
-      augments: data.augments || {}
+        weapons: data.weapons || {},
+        augments: data.augments || {}
     };
-  }
+}
 
   function setActiveWeapon(weapon) {
     activeWeapon = weapon;
