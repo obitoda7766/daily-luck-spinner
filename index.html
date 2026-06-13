@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Lucky Augment</title>
+  <link rel="stylesheet" href="styles.css?v=neon-pixels-20260613">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <img class="logo-mark" src="assets/tanki_online_color.496a1d41.png" alt="Tanki Online">
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">TANKI ONLINE</p>
+      <h1>请选择你的幸运转化</h1>
+      <p class="subtitle">点击抽取，随机获得一个转化；不满意就再抽一次。</p>
+    </section>
+
+    <section class="augment-console" aria-label="Lucky Augment draw">
+      <div class="weapon-tabs" id="weaponTabs" aria-label="武器分类"></div>
+
+      <div class="section-title">
+        <span>随机池预览</span>
+        <strong id="poolCount">0</strong>
+      </div>
+      <div class="augment-strip" id="augmentStrip" aria-label="Augment 图标预览"></div>
+
+      <section class="result-card" id="resultCard">
+        <div class="draw-side">
+          <div class="draw-frame" aria-live="polite">
+            <div id="augmentFallback" class="augment-fallback">?</div>
+            <img id="augmentIcon" class="augment-icon" alt="">
+          </div>
+          <div class="draw-actions">
+            <button id="drawButton" class="draw-button" type="button" disabled>开始抽取</button>
+          </div>
+          <p id="statusText" class="status-text"></p>
+        </div>
+
+        <article class="detail-side">
+          <div class="detail-header">
+            <div>
+              <p class="result-kicker">抽取结果</p>
+              <h2 id="resultName">待命</h2>
+            </div>
+            <div class="meta-row">
+              <span id="resultWeapon">武器</span>
+              <span id="resultRarity" class="rarity-pill">稀有度</span>
+            </div>
+          </div>
+
+          <section class="copy-block">
+            <h3>描述</h3>
+            <p id="resultDescription">准备开始抽取。</p>
+          </section>
+
+          <section class="stat-columns">
+            <div class="stat-box good">
+              <h3>优点</h3>
+              <ul id="advantagesList"></ul>
+            </div>
+            <div class="stat-box bad">
+              <h3>缺点</h3>
+              <ul id="disadvantagesList"></ul>
+            </div>
+          </section>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js?v=neon-pixels-20260613"></script>
+</body>
+</html>
